@@ -12,9 +12,9 @@ class Agent:
 
     def __init__(self):
         self.n_games = 0
-        self.epsilon = 100 # randomness
+        self.epsilon = 80 # randomness
         self.gamma = 0.9
-        self.alpha = 0.01
+        self.alpha = 0.001
         self.memory = deque(maxlen=MAX_MEMORY) # popleft()
         self.model = QModel(11, 256, 3)
         self.optimizer = AdamOptimizer(self.alpha)
